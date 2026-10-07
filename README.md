@@ -285,6 +285,47 @@ Network-Microservices/
 └── ai-recommendation-service/
 ```
 
+## How to Run
+
+1. Clone the repository and open the project in Eclipse or any Spring Boot IDE.
+
+2. Configure the MySQL / Aiven database details in the required services.
+
+3. Start the **Eureka Server** first.
+
+4. Open the Eureka Dashboard:
+
+```text
+http://localhost:8761
+```
+
+5. Start the remaining microservices one by one:
+
+```text
+API Gateway
+Customer Service
+Outage Service
+Technician Service
+Notification Service
+AI Recommendation Service
+```
+
+6. Refresh the Eureka Dashboard:
+
+```text
+http://localhost:8761
+```
+
+The running microservices should appear as registered services.
+
+7. Once the required services are registered, use **Postman** to test the APIs through the API Gateway.
+
+Example:
+
+```text
+http://localhost:8085/outages/my
+```
+
 ## Project Flow
 
 ```text
@@ -309,3 +350,5 @@ Network-Microservices/
                                   Notification
                                     Service
 ```
+
+
